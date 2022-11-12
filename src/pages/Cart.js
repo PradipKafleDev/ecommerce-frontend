@@ -209,7 +209,7 @@ const Cart = () => {
                   <ProductAmount>1</ProductAmount>
                   <Remove />
                 </ProductAmountContainer>
-                <ProductPrice>$ 20</ProductPrice>
+                <ProductPrice>$ 30</ProductPrice>
               </PriceDetail>
             </Product>
           </Info>
