@@ -4,6 +4,7 @@ import {
   FavoriteBorderOutlined,
 } from "@mui/icons-material";
 import React from "react";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 //Info has to define before container if we add hover property on container which changes the info opacity on hover
@@ -64,17 +65,20 @@ const Icon = styled.div`
   }
 `;
 
-const Product = ({ img }) => {
+const Product = ({ item }) => {
+  console.log(item);
   return (
     <Container>
       <Circle />
-      <Image src={img} />
+      <Image src={item.img} />
       <Info>
         <Icon>
           <ShoppingCartOutlined />
         </Icon>
         <Icon>
-          <Search />
+          <Link to={`/product/${item._id}`}>
+            <Search />
+          </Link>
         </Icon>
         <Icon>
           <FavoriteBorderOutlined />
